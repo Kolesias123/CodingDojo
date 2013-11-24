@@ -66,8 +66,12 @@ function ARomano(iNum)
 		if ( l == 'M' && iCantidad >= 4 )
 		{
 			pResult += ARomano(iCantidad);
-		}
 
+			// Agregamos un estilo al número romano si es mayor +4,000
+			// para representar que el número está siendo multiplicado
+			// por 1,000
+			pResult = '<span style="text-decoration:overline;">' + pResult + '</span>';
+		}
 		// De otra forma solo repetimos las letras.
 		else
 		{
